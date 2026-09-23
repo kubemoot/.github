@@ -1,0 +1,43 @@
+name: Bug report
+description: Something is broken.
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps that reproduces this.
+    validations:
+      required: true
+  - type: input
+    id: repo-version
+    attributes:
+      label: Repo and version
+      description: Which repo, and which tag or commit?
+      placeholder: kubemoot, v0.14.2
+    validations:
+      required: true
+  - type: input
+    id: cluster
+    attributes:
+      label: Cluster type and version
+      description: kind, k3s, a managed cloud cluster, bare metal, and the Kubernetes version.
+      placeholder: kind v0.24, Kubernetes v1.31
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Operator logs, agent-runtime logs, or `kubectl describe` output, as relevant.
+      render: shell
+    validations:
+      required: false

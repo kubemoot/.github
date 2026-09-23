@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/orgs/kubemoot/discussions
+    about: Not sure if this is a bug? Ask in Discussions first.

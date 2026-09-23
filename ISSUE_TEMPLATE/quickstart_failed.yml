@@ -1,0 +1,56 @@
+name: Quickstart failed
+description: quickstart.sh did not work on a fresh cluster.
+labels:
+  - bug
+  - quickstart
+body:
+  - type: markdown
+    attributes:
+      value: >
+        The quickstart runs in CI on every release from an empty cluster, so if it
+        broke, it broke for a reason CI did not catch, usually something environment-
+        specific. The fields below are exactly what is needed to reproduce that
+        environment.
+  - type: input
+    id: cluster
+    attributes:
+      label: Cluster type and version
+      placeholder: kind v0.24, Kubernetes v1.31
+    validations:
+      required: true
+  - type: input
+    id: tool-versions
+    attributes:
+      label: kubectl and helm versions
+      description: Output of `kubectl version` and `helm version`.
+    validations:
+      required: true
+  - type: input
+    id: failed-step
+    attributes:
+      label: Which quickstart step failed
+      description: The step number and name from quickstart/README.md, or the last line the script printed before it stopped.
+    validations:
+      required: true
+  - type: textarea
+    id: last-output
+    attributes:
+      label: Last 40 lines of output
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Output of `kubectl get modelproviders,models,agents,crews -A`
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: operator-logs
+    attributes:
+      label: Operator logs
+      description: Last 40-80 lines is usually enough. `kubectl logs -n kubemoot deploy/kubemoot-operator --tail=80`, adjust the namespace/deployment name if you overrode them.
+      render: shell
+    validations:
+      required: true
