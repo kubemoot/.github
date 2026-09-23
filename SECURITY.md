@@ -15,9 +15,6 @@ Report privately using GitHub's private vulnerability reporting on the affected
 repo: open the repo's **Security** tab and choose **Report a vulnerability**. Do not
 open a public issue for a security report.
 
-<!-- TODO: security@kubemoot.org is a placeholder mailbox; wire it up (or replace
-     this line) before relying on it as a fallback. -->
-
 If private reporting is not available on a given repo, email security@kubemoot.org
 as a fallback.
 
