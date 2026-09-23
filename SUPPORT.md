@@ -32,4 +32,10 @@ Open an Issue on the repo where you found it, using the matching template:
 - **Quickstart failed** for a fresh-cluster quickstart run that did not work; it asks
   for the exact information needed to reproduce a stranger's environment.
 
+## Everything else
+
+Speaking, press, teaching, or something that fits neither Discussions nor Issues:
+write to moot@kubemoot.org. Security reports go to the private channel in
+[SECURITY.md](../SECURITY.md), never to this address.
+
 <!-- TODO: link to the docs site once its URL is finalized. -->
