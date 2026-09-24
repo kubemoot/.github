@@ -42,7 +42,7 @@ is adopted later, it is added here first and the site follows.
 
 ## Voice
 
-Tagline: **A moot that finds consensus across agents.**
+Tagline: **Every voice, one answer.**
 
 Prose names: Kubemoot, Homelab Pilot, CrewForge, kmctl. Identifiers: `kubemoot`,
 `homelab-pilot`, `crew-forge`, `kmctl`. Never "KubeMoot", "Crew Forge", or

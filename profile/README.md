@@ -5,7 +5,7 @@
   <img src="https://github.com/kubemoot/.github/blob/main/brand/kubemoot-mark.svg?raw=true" width="160" alt="Kubemoot: a round table with water drops gathered around it">
 
   <h1 style="border-bottom: none; margin-bottom: 0; font-size: 2.5em;">
-    A moot that finds consensus across agents.
+    Every voice, one answer.
   </h1>
 
   <p>
@@ -15,7 +15,7 @@
   <br>
 
   <p>
-    Kubemoot is an emerging Kubernetes controller for agentic consensus: a crew of
+    Kubemoot is an emerging Kubernetes controller for agentic consensus: a moot of
     small, open models, running on your own hardware, that deliberate at a round
     table and settle on an answer together. No single model holds the gavel.
   </p>
