@@ -52,5 +52,5 @@ Prose names: Kubemoot, Homelab Pilot, CrewForge, kmctl. Identifiers: `kubemoot`,
 
 - Organization profile: `profile/README.md` in this repository.
 - Documentation site: `kubemoot-docs/assets/icons/logo.svg` (navbar),
-  `static/img/kubemoot-mark.svg` (landing page), `static/favicons/*` (cut from the
+  `assets/img/kubemoot-mark.svg` (landing page, served under a content hash), `static/favicons/*` (cut from the
   1024 px render). Copies, refreshed from here when the mark changes.
