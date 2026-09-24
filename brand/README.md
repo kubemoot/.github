@@ -5,8 +5,9 @@ documentation site, slides, and social cards copy from here; nothing redraws its
 
 ## The mark
 
-A round table seen from above, with water drops gathered around it, every drop's
-point aimed at the center. The table is the moot; the drops are the agents: many,
+A round table seen from above, with seven water drops gathered around it, every
+drop's point aimed at the center. Seven, like the seven sides of the Kubernetes
+wheel. The table is the moot; the drops are the agents: many,
 small, alike in form, each turned toward the shared decision. The image comes from
 the round table of the Arthurian legend: no head of the table, so no seat outranks
 another.
