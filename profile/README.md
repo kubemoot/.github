@@ -5,7 +5,7 @@
   <img src="https://github.com/kubemoot/.github/blob/main/profile/kubemoot-mark.svg?raw=true" width="160" alt="Kubemoot: a round table with water drops gathered around it">
 
   <h1 style="border-bottom: none; margin-bottom: 0; font-size: 2.5em;">
-    Where agents meet to decide.
+    A moot that finds consensus across agents.
   </h1>
 
   <p>
