@@ -5,7 +5,7 @@ consensus discussions instead of answering alone. A crew, its models, its RAG
 sources, and its MCP tools are Custom Resources: declared, versioned, reviewed, and
 applied through GitOps, the same way you already manage the rest of the cluster.
 
-Agent behavior is governed by ADL (Agent Definition Language): WHEN/THEN, ASSERT, and
+Agent behavior is governed by ADL, the Architecture Definition Language, applied to agents: WHEN/THEN, ASSERT, and
 NEVER rules, shipped as `PromptModule` Custom Resources instead of free-text prompts
 buried in application code. A moot is an assembly that meets to discuss and decide; a
 Kubemoot crew does the same, with a coordinator that determines when the discussion
