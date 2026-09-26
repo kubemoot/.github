@@ -29,11 +29,9 @@ for what each step does.
 - **[crews](https://github.com/kubemoot/crews)**, a collection of crew definitions,
   from the minimal quickstart crew to fuller reference examples.
 - **[kmctl](https://github.com/kubemoot/kmctl)**, the terminal CLI for working with
-  crews and conversations, the `kubectl`-style counterpart to CrewForge.
+  crews and conversations, `kubectl`-style.
 - **[kubemoot-docs](https://github.com/kubemoot/kubemoot-docs)**, the documentation
   site: a Hugo and Docsy shell that aggregates each component's own docs.
-- **[crew-forge](https://github.com/kubemoot/crew-forge)**, a desktop app for
-  authoring crews and their CRDs without hand-writing YAML.
 
 ## Status
 
