@@ -1,41 +1,15 @@
 # Support
 
-Kubemoot has no commercial support. Support is community, best effort, single
-maintainer.
+Kubemoot is an independent open-source project under the Apache License 2.0. Contributing, support, governance, the code of conduct, security reporting, and releases are documented in one place: the [Community section of kubemoot.org](https://kubemoot.org/docs/community/). Ask questions and share ideas in [GitHub Discussions](https://github.com/orgs/kubemoot/discussions). For anything else write to moot@kubemoot.org, and report vulnerabilities privately to security@kubemoot.org.
 
-## First, try the quickstart
+Kubemoot has no commercial support; support is community, best effort.
 
-If you are new here, run the quickstart on an empty `kind` cluster before asking a
-question. It takes a few minutes and exercises the same path CI checks on every
-release:
+| You want to | Go to |
+|-------------|-------|
+| Ask a question or share an idea | [Discussions](https://github.com/orgs/kubemoot/discussions) |
+| Report a defect or request a feature | An issue on the repo, using its template |
+| Anything else: speaking, press, teaching | moot@kubemoot.org |
+| Report a vulnerability | security@kubemoot.org, never a public issue |
 
-```bash
-kind create cluster --name kubemoot
-./quickstart/quickstart.sh
-```
-
-If that fails, it is likely the fastest path to your answer: see the "quickstart
-failed" issue template below.
-
-## Have a question?
-
-Use [Discussions](https://github.com/orgs/kubemoot/discussions), not Issues.
-Discussions are for "how do I," "is this expected," "what's the right pattern for,"
-and anything where you are not sure yet whether it is a defect.
-
-## Found a defect?
-
-Open an Issue on the repo where you found it, using the matching template:
-
-- **Bug report** for something that is broken.
-- **Feature request** for something that does not exist yet.
-- **Quickstart failed** for a fresh-cluster quickstart run that did not work; it asks
-  for the exact information needed to reproduce a stranger's environment.
-
-## Everything else
-
-Speaking, press, teaching, or something that fits neither Discussions nor Issues:
-write to moot@kubemoot.org. Security reports go to the private channel in
-[SECURITY.md](../SECURITY.md), never to this address.
-
-<!-- TODO: link to the docs site once its URL is finalized. -->
+New here? Run the [Quickstart](https://kubemoot.org/docs/introduction/quickstart/) on an
+empty `kind` cluster first.

@@ -4,8 +4,8 @@
 
 ## Conventional commit type
 
-<!-- fix / feat / docs / chore / refactor / fix! / feat! - see CONTRIBUTING.md for
-     what each one bumps. -->
+<!-- fix / feat / docs / chore / refactor / fix! / feat! - see
+     https://kubemoot.org/docs/community/contributing/ for what each one bumps. -->
 
 ## Tests
 
