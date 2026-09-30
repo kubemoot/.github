@@ -13,4 +13,6 @@ Before you open a pull request:
 - Include tests with the change.
 
 Contributions are licensed under the Apache License 2.0, the license of the repository
-you contribute to. No CLA and no DCO sign-off are required.
+you contribute to. Sign off every commit with the
+[Developer Certificate of Origin](https://developercertificate.org/) (`git commit -s`);
+a pull request check verifies it. There is no CLA.
