@@ -22,3 +22,4 @@
 - [ ] Tests added for new or changed behavior, covering expected and unexpected input
 - [ ] No function in this change exceeds cyclomatic complexity of 10
 - [ ] Docs updated, or not applicable
+- [ ] Every commit is signed off (`git commit -s`); the DCO check enforces it

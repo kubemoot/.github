@@ -43,6 +43,3 @@ patterns, not a production deployment.
 Questions: [Discussions](https://github.com/orgs/kubemoot/discussions). Everything
 else, including speaking and press: moot@kubemoot.org. Security: see
 [SECURITY.md](https://github.com/kubemoot/.github/blob/main/SECURITY.md).
-
-<!-- TODO: kubemoot.org is planned as the project website, with kubemoot.org/docs as
-     the hosted reference; link both here once DNS and the site are live. -->
