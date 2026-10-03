@@ -1,42 +1,57 @@
+name: Question
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for asking. The more specific you are, the faster someone can answer.
-        For a bug or a feature request, open an issue in the repository instead.
+        For a bug or a feature request, open an issue in the matching repository instead (see the chooser at https://github.com/kubemoot/kubemoot/issues/new/choose).
         For a security vulnerability, do not post here: see https://kubemoot.org/docs/community/security/.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which component
+      options:
+        - Kubemoot (operator, runtime, dashboard, quickstart)
+        - kmctl
+        - CrewForge (VS Code extension)
+        - Crews
+        - Docs or website
+        - Not sure
+    validations:
+      required: true
   - type: textarea
     id: goal
     attributes:
-      label: What were you trying to do?
+      label: "What were you trying to do?"
       description: The outcome you wanted, in a sentence or two.
     validations:
       required: true
   - type: textarea
     id: happened
     attributes:
-      label: What happened?
+      label: "What happened?"
       description: What you ran, what you saw, and what you expected. Paste relevant output, commands, or manifests (remove secrets first).
     validations:
       required: true
-  - type: input
-    id: kubernetes
+  - type: textarea
+    id: versions
     attributes:
-      label: Kubernetes distribution and version
-      description: For example kind, k3s, Talos, or a managed service, and its Kubernetes version.
+      label: Versions
+      description: "Whichever apply: Kubemoot, kmctl, CrewForge, Kubernetes."
+      placeholder: "For example the outputs of `helm list -A`, `kmctl version`, and `kubectl version`"
     validations:
-      required: true
+      required: false
   - type: input
-    id: kubemoot-version
+    id: environment
     attributes:
-      label: Kubemoot version
-      description: The operator chart version, for example from `helm list -A`.
+      label: Kubernetes distribution and OS
+      placeholder: "For example kind, k3s, Talos, or a managed service; and the OS and architecture of your nodes or machine"
     validations:
-      required: true
+      required: false
   - type: input
     id: model-provider
     attributes:
-      label: Model provider
-      description: The model server and models in use, for example Ollama on a GPU, or the CPU quickstart.
+      label: Model provider and GPU
+      placeholder: For example Ollama on a GPU, or CPU only
     validations:
-      required: true
+      required: false

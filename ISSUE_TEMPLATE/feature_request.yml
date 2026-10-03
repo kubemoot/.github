@@ -1,26 +1,60 @@
 name: Feature request
-description: Something you want that does not exist yet.
+description: Something new or different, argued from the problem it solves.
 labels:
   - enhancement
 body:
-  - type: textarea
-    id: problem
+  - type: markdown
     attributes:
-      label: What problem are you trying to solve
-      description: Describe the situation, not just the feature you have in mind.
+      value: "A specific repository has the better form: [kubemoot/kubemoot](https://github.com/kubemoot/kubemoot/issues/new/choose), [kubemoot/kmctl](https://github.com/kubemoot/kmctl/issues/new/choose), [kubemoot/vscode-crewforge](https://github.com/kubemoot/vscode-crewforge/issues/new/choose), or [kubemoot/crews](https://github.com/kubemoot/crews/issues/new/choose). Use this form only if none of them fits. Something that worked or should work does not? File a Bug report instead; this form is for something new or different."
+  - type: checkboxes
+    id: searched
+    attributes:
+      label: Before you file
+      options:
+        - label: I searched existing issues and discussions and did not find this one
+          required: true
+  - type: input
+    id: component
+    attributes:
+      label: Project it touches
+      placeholder: The component or repository the idea is for
     validations:
       required: true
   - type: textarea
+    id: problem
+    attributes:
+      label: The problem or use case
+      description: What you are trying to do, and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: beneficiaries
+    attributes:
+      label: Who benefits
+      description: Who else runs into this, and how often.
+    validations:
+      required: false
+  - type: textarea
     id: proposal
     attributes:
-      label: What you would like to see
-      description: A rough shape is fine; this does not need to be a full design.
+      label: Proposed solution
+      description: "A rough shape is fine; this does not need to be a full design."
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives considered
-      description: Anything else you tried, or a reason no workaround exists.
+      label: Alternatives and workarounds
+      description: Other approaches you considered, and any workaround you use now.
+    validations:
+      required: false
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: "Would you be willing to help implement this?"
+      options:
+        - "Yes"
+        - Maybe
+        - "No"
     validations:
       required: false
