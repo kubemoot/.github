@@ -45,11 +45,16 @@ VARIANTS = [
 ]
 
 
-def shape(font_path):
-    """Glyph names and kerned pen positions for NAME, in font units."""
+def num(v, places=2):
+    """A number for SVG output: rounded to places, trailing zeros dropped."""
+    return f"{v:.{places}f}".rstrip("0").rstrip(".")
+
+
+def shape(font_path, text=NAME):
+    """Glyph names and kerned pen positions for text (default NAME), in font units."""
     blob = hb.Blob.from_file_path(str(font_path))
     buf = hb.Buffer()
-    buf.add_str(NAME)
+    buf.add_str(text)
     buf.guess_segment_properties()
     hb_font = hb.Font(hb.Face(blob))
     hb.shape(hb_font, buf, {"kern": True})
@@ -67,7 +72,7 @@ def outline(ttf, placed, size, left, baseline):
     """One SVG path for the whole name, with coordinates baked in, plus its ink bounds."""
     glyphs = ttf.getGlyphSet()
     scale = size / ttf["head"].unitsPerEm
-    pen = SVGPathPen(glyphs, ntos=lambda v: f"{v:.2f}".rstrip("0").rstrip("."))
+    pen = SVGPathPen(glyphs, ntos=num)
     bounds = BoundsPen(glyphs)
     for name, x in placed:
         matrix = (scale, 0, 0, -scale, left + x * scale, baseline)
@@ -143,7 +148,7 @@ def svg(layout, ttf, placed, src, name_color, weight):
     vy0 = min(mark[1], ty0) - MARGIN
     vw = max(mark[2], tx1) + MARGIN - vx0
     vh = max(mark[3], ty1) + MARGIN - vy0
-    box = " ".join(f"{v:.1f}".rstrip("0").rstrip(".") for v in (vx0, vy0, vw, vh))
+    box = " ".join(num(v, 1) for v in (vx0, vy0, vw, vh))
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{box}" '
         f'width="{vw:.0f}" height="{vh:.0f}" role="img" aria-label="{LABEL}">\n'

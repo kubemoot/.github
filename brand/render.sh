@@ -39,6 +39,16 @@ for variant in color black white white-text; do
     -o "stacked/$variant/kubemoot-stacked-$variant.png"
 done
 
+# Social preview cards: 1280 x 640, one per public repository. The committed SVGs are
+# authoritative; with WORDMARK_FONT_DIR set, social_card.py rebuilds them first (after
+# the lockups, which the cards embed).
+if [[ -n "${WORDMARK_FONT_DIR:-}" ]]; then
+  "${PYTHON:-python3}" social_card.py "$WORDMARK_FONT_DIR"
+fi
+for card in social/*.svg; do
+  "$RSVG" -w 1280 -h 640 "$card" -o "${card%.svg}.png"
+done
+
 # Avatar: the full-color icon on solid Paper, so it reads on light and dark profile themes.
 for size in 1024 512; do
   render icon/color/kubemoot-icon-color.svg "$size" "avatar/kubemoot-avatar-$size.png" "$PAPER"
