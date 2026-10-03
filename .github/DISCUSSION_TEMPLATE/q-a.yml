@@ -1,0 +1,42 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking. The more specific you are, the faster someone can answer.
+        For a bug or a feature request, open an issue in the repository instead.
+        For a security vulnerability, do not post here: see https://kubemoot.org/docs/community/security/.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+      description: The outcome you wanted, in a sentence or two.
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: What you ran, what you saw, and what you expected. Paste relevant output, commands, or manifests (remove secrets first).
+    validations:
+      required: true
+  - type: input
+    id: kubernetes
+    attributes:
+      label: Kubernetes distribution and version
+      description: For example kind, k3s, Talos, or a managed service, and its Kubernetes version.
+    validations:
+      required: true
+  - type: input
+    id: kubemoot-version
+    attributes:
+      label: Kubemoot version
+      description: The operator chart version, for example from `helm list -A`.
+    validations:
+      required: true
+  - type: input
+    id: model-provider
+    attributes:
+      label: Model provider
+      description: The model server and models in use, for example Ollama on a GPU, or the CPU quickstart.
+    validations:
+      required: true
