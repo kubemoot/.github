@@ -5,7 +5,7 @@ labels:
 body:
   - type: markdown
     attributes:
-      value: "Most reports belong in a specific repository, which has fields for exactly what its maintainers need: [kubemoot/kubemoot](https://github.com/kubemoot/kubemoot/issues/new/choose) for the operator, runtime, dashboard, and quickstart; [kubemoot/kmctl](https://github.com/kubemoot/kmctl/issues/new/choose) for the CLI; [kubemoot/vscode-crewforge](https://github.com/kubemoot/vscode-crewforge/issues/new/choose) for the extension; [kubemoot/crews](https://github.com/kubemoot/crews/issues/new/choose) for crew behavior; [kubemoot/kubemoot-docs](https://github.com/kubemoot/kubemoot-docs/issues/new/choose) for docs and the website. Use this form only if none of them fits."
+      value: "Something that worked or should work does not? Use this form, but most reports belong in a specific repository, which has fields for exactly what its maintainers need: [kubemoot/kubemoot](https://github.com/kubemoot/kubemoot/issues/new/choose) for the operator, runtime, dashboard, and quickstart; [kubemoot/kmctl](https://github.com/kubemoot/kmctl/issues/new/choose) for the CLI; [kubemoot/vscode-crewforge](https://github.com/kubemoot/vscode-crewforge/issues/new/choose) for the extension; [kubemoot/crews](https://github.com/kubemoot/crews/issues/new/choose) for crew behavior; [kubemoot/kubemoot-docs](https://github.com/kubemoot/kubemoot-docs/issues/new/choose) for docs and the website. Use this form only if none of them fits."
   - type: checkboxes
     id: searched
     attributes:
