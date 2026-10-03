@@ -1,32 +1,56 @@
 <div align="center">
-
-  <br>
-
-  <img src="https://github.com/kubemoot/.github/blob/main/brand/kubemoot-mark.svg?raw=true" width="160" alt="Kubemoot: a round table with water drops gathered around it">
-
-  <h1 style="border-bottom: none; margin-bottom: 0; font-size: 2.5em;">
-    Every voice, one answer.
-  </h1>
-
-  <p>
-    [ Soon. ]
-  </p>
-
-  <br>
-
-  <p>
-    Kubemoot is an emerging Kubernetes controller for agentic consensus: a moot of
-    small, open models, running on your own hardware, that deliberate at a round
-    table and settle on an answer together. No single model holds the gavel.
-  </p>
-
-  <p>
-    Crews, agents, and their rules are Custom Resources. You apply a crew the way you
-    apply a Deployment.
-  </p>
-
-  <p>
-    <a href="mailto:moot@kubemoot.org">moot@kubemoot.org</a>
-  </p>
-
+  <img src="https://github.com/kubemoot/.github/blob/main/brand/kubemoot-mark.svg?raw=true" width="120" alt="Kubemoot: a round table with water drops gathered around it">
+  <h3>Every voice, one answer.</h3>
+  <p><a href="https://kubemoot.org">kubemoot.org</a></p>
 </div>
+
+# Kubemoot
+
+Kubemoot is a Kubernetes operator for running crews of LLM agents that hold
+consensus discussions instead of answering alone. A crew, its models, its RAG
+sources, and its MCP tools are Custom Resources: declared, versioned, reviewed, and
+applied through GitOps, the same way you already manage the rest of the cluster.
+
+Agent behavior is governed by ADL, the Architecture Definition Language, applied to agents: WHEN/THEN, ASSERT, and
+NEVER rules, shipped as `PromptModule` Custom Resources instead of free-text prompts
+buried in application code. A moot is an assembly that meets to discuss and decide; a
+Kubemoot crew does the same, with a coordinator that determines when the discussion
+has settled.
+
+## Quickstart
+
+```bash
+git clone https://github.com/kubemoot/kubemoot && cd kubemoot
+kind create cluster --name kubemoot
+./quickstart/quickstart.sh
+```
+
+That installs the operator, a small CPU model, and a two-agent crew, then has the
+crew answer a question. See [kubemoot/quickstart](https://github.com/kubemoot/kubemoot/tree/main/quickstart)
+for what each step does.
+
+## Repos
+
+- **[kubemoot](https://github.com/kubemoot/kubemoot)**, the operator: controllers,
+  CRDs, the agent runtime, and the dashboard.
+- **[crews](https://github.com/kubemoot/crews)**, a collection of crew definitions,
+  from the minimal quickstart crew to fuller reference examples.
+- **[kmctl](https://github.com/kubemoot/kmctl)**, the terminal CLI for working with
+  crews and conversations, `kubectl`-style.
+- **[kubemoot-docs](https://github.com/kubemoot/kubemoot-docs)**, the documentation
+  site: a Hugo and Docsy shell that aggregates each component's own docs.
+- **[vscode-crewforge](https://github.com/kubemoot/vscode-crewforge)**, CrewForge, the
+  VS Code extension for editing, deploying, and talking to crews.
+
+The documentation lives at [kubemoot.org](https://kubemoot.org/docs/).
+
+## Status
+
+`v0.x`, alpha API (`v1alpha1`). Built and run on a homelab with production-like
+patterns, not a production deployment.
+
+## Contact
+
+Questions: [Discussions](https://github.com/orgs/kubemoot/discussions). Everything
+else, including speaking and press: moot@kubemoot.org. Security: see
+[SECURITY.md](https://github.com/kubemoot/.github/blob/main/SECURITY.md).
