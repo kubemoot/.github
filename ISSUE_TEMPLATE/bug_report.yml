@@ -1,43 +1,62 @@
 name: Bug report
-description: Something is broken.
+description: Something is broken. Check the chooser for the repository that fits first.
 labels:
   - bug
 body:
-  - type: textarea
-    id: description
+  - type: markdown
     attributes:
-      label: What happened
-      description: What did you expect, and what happened instead?
-    validations:
-      required: true
-  - type: textarea
-    id: reproduce
+      value: "Most reports belong in a specific repository, which has fields for exactly what its maintainers need: [kubemoot/kubemoot](https://github.com/kubemoot/kubemoot/issues/new/choose) for the operator, runtime, dashboard, and quickstart; [kubemoot/kmctl](https://github.com/kubemoot/kmctl/issues/new/choose) for the CLI; [kubemoot/vscode-crewforge](https://github.com/kubemoot/vscode-crewforge/issues/new/choose) for the extension; [kubemoot/crews](https://github.com/kubemoot/crews/issues/new/choose) for crew behavior; [kubemoot/kubemoot-docs](https://github.com/kubemoot/kubemoot-docs/issues/new/choose) for docs and the website. Use this form only if none of them fits."
+  - type: checkboxes
+    id: searched
     attributes:
-      label: Steps to reproduce
-      description: The smallest set of steps that reproduces this.
+      label: Before you file
+      options:
+        - label: I searched existing issues and did not find this one
+          required: true
+  - type: input
+    id: component
+    attributes:
+      label: Which project
+      placeholder: The component or repository you are using
     validations:
       required: true
   - type: input
-    id: repo-version
+    id: version
     attributes:
-      label: Repo and version
-      description: Which repo, and which tag or commit?
-      placeholder: kubemoot, v0.14.2
+      label: Version
+      placeholder: "The output of the project's version command, or the chart version"
     validations:
       required: true
   - type: input
-    id: cluster
+    id: environment
     attributes:
-      label: Cluster type and version
-      description: kind, k3s, a managed cloud cluster, bare metal, and the Kubernetes version.
-      placeholder: kind v0.24, Kubernetes v1.31
+      label: Kubernetes distribution, version, and OS
+      placeholder: "Distribution, server version from `kubectl version`, and node OS"
     validations:
       required: false
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps. Remove secrets first.
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
       label: Relevant logs
-      description: Operator logs, agent-runtime logs, or `kubectl describe` output, as relevant.
       render: shell
     validations:
       required: false
