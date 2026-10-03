@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/kubemoot/.github/blob/main/brand/kubemoot-mark.svg?raw=true" width="120" alt="Kubemoot: a round table with water drops gathered around it">
+  <img src="https://github.com/kubemoot/.github/blob/main/brand/icon/color/kubemoot-icon-color.svg?raw=true" width="120" alt="Kubemoot: a round table with water drops gathered around it">
   <h3>Every voice, one answer.</h3>
   <p><a href="https://kubemoot.org">kubemoot.org</a></p>
 </div>
