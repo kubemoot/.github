@@ -16,7 +16,8 @@ another.
 |---|---|
 | `kubemoot-mark.svg` | Canonical. Light or mid backgrounds. Scales to any size; the favicons are cut from it. |
 | `kubemoot-mark-on-dark.svg` | Dark backgrounds: the table turns light so it stays visible. |
-| `kubemoot-mark-512.png`, `kubemoot-mark-1024.png`, `kubemoot-mark-on-dark-512.png` | Renders for places that cannot take SVG (social cards, slide tools, avatars). |
+| `kubemoot-mark-512.png`, `kubemoot-mark-1024.png`, `kubemoot-mark-on-dark-512.png` | Transparent renders for places that cannot take SVG (social cards, slide tools). |
+| `kubemoot-avatar-1024.png` | Profile pictures (the GitHub org avatar): the mark on a solid Paper background, so it reads on light and dark themes. Regenerate with `render-avatar.sh`. |
 
 Rules: keep clear space of at least one drop's length around the mark; never rotate,
 recolor, outline, or add a gradient; below 24 px use the mark alone, no wordmark; do
