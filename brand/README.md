@@ -129,14 +129,21 @@ Plain hyphens, never em dashes.
 
 ## Where the mark is used
 
-Every use is a copy, refreshed from here when the mark changes.
+Every use is a byte copy pinned to a commit of this repository. Each consuming repo
+keeps a `brand.lock` (source commit, file paths, sha256) and `scripts/brand-sync.sh`:
+`check` runs in that repo's CI and fails when a copy drifts; `refresh <commit>` pulls a
+new version of the brand.
 
 - GitHub organization avatar: `avatar/kubemoot-avatar-1024.png`, uploaded in the org settings.
 - Organization profile: `profile/README.md` in this repository links the full-color icon.
-- Documentation site: `kubemoot-docs/assets/icons/logo.svg` (navbar),
-  `assets/img/kubemoot-mark.svg` (landing page, served under a content hash),
-  `static/favicons/*` (the favicon set).
-- Kubemoot dashboard: the favicon set, in `kubemoot/dashboard/static/`.
-- Homelab Pilot: the favicon set, in `homelab-pilot`'s SvelteKit static assets.
-- CrewForge: `vscode-crewforge/media/` (the activity bar icon and the webview logo in
-  light and dark forms).
+- Documentation site (`kubemoot-docs`): `assets/icons/logo.svg` (navbar, full-color icon),
+  `assets/img/kubemoot-icon-white.svg` (landing page on brand blue, one-color white,
+  served under a content hash), and the favicon set linked from
+  `layouts/partials/favicons.html`.
+- Kubemoot dashboard (`kubemoot/dashboard`): the favicon set, and the `white-text`
+  horizontal lockup in the sidebar.
+- Homelab Pilot: the favicon set, and the `white-text` horizontal lockup in its
+  "Powered by" footer (the header keeps Homelab Pilot's own identity).
+- CrewForge (`vscode-crewforge/media/`): `icon.png` (Marketplace, full color),
+  `kubemoot.svg` (activity bar, one color, tinted by VS Code), and
+  `kubemoot-favicon-small.svg` (editor tab icon, the below-24-px form).
