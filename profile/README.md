@@ -6,8 +6,8 @@
 
 # Kubemoot
 
-Kubemoot is a Kubernetes operator for running crews of LLM agents that hold
-consensus discussions instead of answering alone. A crew, its models, its RAG
+Kubemoot is a Kubernetes operator for crews of LLM agents that deliberate to
+consensus instead of answering alone. A crew, its models, its RAG
 sources, and its MCP tools are Custom Resources: declared, versioned, reviewed, and
 applied through GitOps, the same way you already manage the rest of the cluster.
 
