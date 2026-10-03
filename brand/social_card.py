@@ -49,15 +49,11 @@ TITLE_TO_LINE = 92.0
 FOOTER_SIZE = 32.0
 FOOTER_BASELINE = 568.0
 
-# Each card: (repository, the name shown large or None for the lockup itself, one line).
+# One card for every public repository: one image, one message, wherever a Kubemoot
+# link is shared. (repository, the name shown large or None for the lockup, one line)
 CARDS = [
     ("kubemoot", None,
      "A Kubernetes operator for crews of LLM agents that deliberate to consensus."),
-    ("crews", "crews", "Example Kubemoot crews as Helm charts."),
-    ("kmctl", "kmctl", "The command-line tool for Kubemoot crews and discussions."),
-    ("kubemoot-docs", "kubemoot-docs", "The Kubemoot landing page and reference documentation."),
-    ("vscode-crewforge", "CrewForge", "Build, deploy, and talk to crews from VS Code."),
-    ("release-actions", "release-actions", "Shared GitHub Actions for Kubemoot releases."),
 ]
 
 

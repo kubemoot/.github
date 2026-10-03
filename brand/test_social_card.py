@@ -138,11 +138,9 @@ class PlaceLockupTest(unittest.TestCase):
 
 
 class CardListTest(unittest.TestCase):
-    def test_one_card_per_public_repository(self):
+    def test_one_card_for_every_repository(self):
         repos = [repo for repo, _, _ in social_card.CARDS]
-        self.assertEqual(sorted(repos), sorted(set(repos)))
-        self.assertEqual(set(repos), {"kubemoot", "crews", "kmctl", "kubemoot-docs",
-                                      "vscode-crewforge", "release-actions"})
+        self.assertEqual(repos, ["kubemoot"])
 
     def test_text_is_plain_ascii(self):
         for repo, title, line in social_card.CARDS:

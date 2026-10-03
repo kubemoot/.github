@@ -36,10 +36,10 @@ commit the outputs together.
 | `favicon/kubemoot-favicon.svg` | Adaptive SVG favicon: full color in light browser chrome, the white form under `prefers-color-scheme: dark`. Cropped tighter than the icon. |
 | `favicon/kubemoot-favicon-small.svg` | The small form: the table as a solid disc, no ring. Source of the 16 px favicon. |
 | `favicon/favicon-32.png`, `favicon-16.png`, `favicon.ico` | Fallbacks for browsers without SVG favicons. The `.ico` holds both PNGs. |
-| `social/<repo>.svg`, `social/<repo>.png` | Social preview cards, 1280 x 640, one per public repository. See [Social preview cards](#social-preview-cards). |
+| `social/kubemoot.svg`, `social/kubemoot.png` | The social preview card, 1280 x 640, used by every public repository. See [Social preview cards](#social-preview-cards). |
 | `render.sh` | Regenerates every PNG and the `.ico`. With `WORDMARK_FONT_DIR` set, first rebuilds the lockup SVGs with `wordmark.py` and the social card SVGs with `social_card.py`. |
 | `wordmark.py` | Builds the lockup SVGs from the icon SVGs and the Plex Sans OTF (needs fontTools and uharfbuzz). The committed SVGs are authoritative. |
-| `social_card.py`, `test_social_card.py` | Builds the social card SVGs from the `white-text` lockup and the Plex Sans OTFs (needs fontTools and uharfbuzz), and its tests: `python3 -m unittest test_social_card` (with `WORDMARK_FONT_DIR` set, it also checks the committed SVGs are current). |
+| `social_card.py`, `test_social_card.py` | Builds the social card SVG from the `white-text` lockup and the Plex Sans OTFs (needs fontTools and uharfbuzz), and its tests: `python3 -m unittest test_social_card` (with `WORDMARK_FONT_DIR` set, it also checks the committed SVGs are current). |
 | `test_wordmark.py` | Checks the lockups against the icon drawing and the `.ico` against the PNGs: `python3 -m unittest test_wordmark` from `brand/` (needs fontTools and uharfbuzz). |
 | `mark-review.md`, `review/`, `render-review.sh` | The decision record for this mark set and its comparison images. |
 
@@ -122,15 +122,16 @@ nothing is embedded or licensed. Headings are set in the same face, heavier.
 
 ## Social preview cards
 
-`social/` holds the image GitHub shows when a repository link is shared: one 1280 x 640
-PNG per public repository (`kubemoot`, `crews`, `kmctl`, `kubemoot-docs`,
-`vscode-crewforge`, `release-actions`). Each card is the Table navy background, the
-`white-text` lockup, the repository name, one line about it, and the tagline with
-kubemoot.org. All content sits inside a central 1088 x 512 area, so a crop to 1200 x 630
-loses nothing; at 400 px wide (a chat link preview) the mark stays at its 24 px minimum.
+`social/kubemoot.png` is the image GitHub shows when a repository link is shared, and
+it is the same card for every public repository (`kubemoot`, `crews`, `kmctl`,
+`kubemoot-docs`, `vscode-crewforge`, `release-actions`): one image, one message, wherever
+a Kubemoot link appears. The link preview's own text (the page title and the repository
+description) names the repository. The card is 1280 x 640: the Table navy background,
+the `white-text` lockup, one line about Kubemoot, and the tagline with kubemoot.org. All
+content sits inside a central 1088 x 512 area, so a crop to 1200 x 630 loses nothing; at
+400 px wide (a chat link preview) the mark stays at its 24 px minimum.
 
-`social_card.py` writes every card SVG from one layout; the names and lines are its
-`CARDS` list. All text is IBM Plex Sans as outlines, like the wordmark. To change a card,
+`social_card.py` writes the card SVG; its line is the `CARDS` entry. All text is IBM Plex Sans as outlines, like the wordmark. To change a card,
 edit `CARDS` and regenerate with the font at hand:
 
 ```sh
@@ -138,9 +139,9 @@ WORDMARK_FONT_DIR=/path/to/ibm-plex-sans/fonts/complete/otf ./render.sh
 ```
 
 Without `WORDMARK_FONT_DIR`, `render.sh` renders the committed SVGs only. The output is
-byte-identical from run to run. GitHub has no API for the social preview: upload each PNG
-once, by hand, in the repository's Settings, General, Social preview (the limit is 1 MB;
-the cards are under 100 KB).
+byte-identical from run to run. GitHub has no API for the social preview: upload
+`social/kubemoot.png` once, by hand, in each public repository's Settings, General, Social
+preview (the limit is 1 MB; the card is under 100 KB).
 
 ## Voice
 
